@@ -1,0 +1,9 @@
+.logo {
+  @include flex;
+  flex-shrink: 0;
+  width: 170px;
+
+  svg {
+    fill: var(--light-color);
+  }
+}

@@ -1,0 +1,13 @@
+.header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  &__container {
+    @include flex-all-sb;
+  }
+
+  &__logo {
+    margin-right: 25px;
+}
+
+}

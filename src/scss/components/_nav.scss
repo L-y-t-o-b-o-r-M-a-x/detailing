@@ -1,0 +1,18 @@
+.nav {
+  &__list {
+    @include flex-v-center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    color: var(--light-color);
+  }
+
+}
