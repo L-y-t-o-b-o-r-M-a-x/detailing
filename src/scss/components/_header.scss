@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   padding-top: 15px;
   padding-bottom: 15px;
 
@@ -10,4 +11,75 @@
     margin-right: 25px;
 }
 
+&__nav-list {
+  @include tablet {
+    @include flex-column-start;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    overflow-y: auto;
+    width: 80%;
+    height: 100vh;
+    box-shadow: 10px 4px 15px 0px rgba(34, 60, 80, 0.25);
+    padding: 51px 100px;
+    margin-right: 0;
+    background-color: var(--dark-green);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-150%);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  }
+
+  @include mobile {
+    width: 100%;
+    padding: 30px 20px 20px;
+  }
+}
+
+&__wrap-contacts {
+  display: flex;
+  width: 60%;
+}
+
+&__wrap-consultation--burger {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+}
+
+.burger {
+  @include burger;
+
+  --burger-width: 35px;
+  --burger-height: 25px;
+
+  position: absolute;
+  top: 43%;
+  right: 3%;
+  z-index: 1000;
+  display: none;
+  color: var(--light-color);
+
+
+  @include tablet {
+    display: block;
+  }
+
+  @include mobile {
+    z-index: 1001;
+    top: 33%;
+  }
+}
+
+
+.menu--active {
+opacity: 1;
+visibility: visible;
+transform: none;
 }

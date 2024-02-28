@@ -2,6 +2,12 @@
   &__list {
     @include flex-v-center;
     flex-wrap: wrap;
+
+    @include tablet {
+      @include flex-column-start;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
   }
 
   &__item {
@@ -10,9 +16,21 @@
     }
   }
 
+  &__item {
+    @include tablet {
+      display: flex;
+      margin-right: 25px;
+    }
+  }
+
+
   &__link {
     font-size: 18px;
     color: var(--light-color);
+
+    @include tablet {
+      font-size: 22px;
+    }
   }
 
 }

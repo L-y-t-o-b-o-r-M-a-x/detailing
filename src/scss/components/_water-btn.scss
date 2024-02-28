@@ -1,0 +1,88 @@
+.water-btn {
+  @include flex-all-center;
+
+  position: relative;
+  overflow: hidden;
+  width: 280px;
+  height: 60px;
+  border-radius: 0 0 10px 10px;
+  outline: none;
+  transition: all .8s ease 0s;
+
+  &:focus {
+    outline: 1px solid var(--bright-yellow);
+    outline-offset: 3px;
+  }
+
+  &:hover {
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(73, 115, 255, 0.6);
+    transition: all 0.8s ease 0.2s;
+
+    .water-btn__waves {
+      top: -50px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
+    font-family: "Ubuntu";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--light-color);
+    transition: all .8s ease 0s;
+  }
+
+  &__waves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 280px;
+    background-color: #4973ff;
+    box-shadow: 0 0 50px var(--translucent-black);
+    transition: all .8s ease 0s;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 250%;
+      height: 250%;
+      transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+    }
+
+    &::before {
+      border-radius: 48%;
+      background-color: var(--light-blue-green);
+      animation: waves 5s infinite linear;
+    }
+
+    &::after {
+      border-radius: 44%;
+      background-color: rgba(0, 182, 196, 0.5);
+      animation: waves 10s infinite linear;
+    }
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  &--burger {
+    display: flex;
+  }
+}
+
+@keyframes waves {
+  0% {
+    transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+  }
+
+  100% {
+    transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);
+  }
+}

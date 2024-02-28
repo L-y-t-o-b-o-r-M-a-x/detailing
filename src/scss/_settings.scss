@@ -24,6 +24,18 @@ html {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 1000px 500px;
+
+  @include tablet {
+    background-size: 800px 300px;
+  }
+
+  @include small-tablet {
+    background-size: 600px 150px;
+  }
+
+  @include mobile {
+    background-size: 300px 150px;
+  }
 }
 
 img {
