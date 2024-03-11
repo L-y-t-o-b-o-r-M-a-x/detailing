@@ -1,0 +1,22 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  padding: 0;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: .192px;
+  color: var(--black);
+  background-color: var(--light-color);
+  transition: all .3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--green);
+    color: var(--bright-yellow);
+  }
+}

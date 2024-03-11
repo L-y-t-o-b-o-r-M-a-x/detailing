@@ -19,6 +19,7 @@ html {
   min-width: 320px;
   min-height: 100%;
   font-size: 16px;
+  color: var(--light-color);
   background-color: #2a2a29;
   background-image: url('../img/logo-2.svg');
   background-repeat: no-repeat;
@@ -53,7 +54,8 @@ a {
 }
 
 .is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
 }
 
 .btn-reset {
@@ -121,4 +123,23 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 46px;
+
+  @include tablet {
+    font-size: 36px;
+  }
+
+  @include small-tablet {
+    margin-bottom: 15px;
+    font-size: 29px;
+  }
+
+  @include mobile {
+    font-size: 26px;
+  }
 }

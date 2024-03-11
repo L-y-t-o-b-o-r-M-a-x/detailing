@@ -1,0 +1,26 @@
+.text {
+  margin: 0;
+  font-size: 22px;
+
+  @include mobile {
+    font-size: 20px;
+  }
+
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &--start {
+    align-self: flex-start;
+    font-size: 24px;
+
+    @include mobile {
+      font-size: 21px;
+    }
+  }
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
