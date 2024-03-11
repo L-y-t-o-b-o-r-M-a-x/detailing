@@ -1,0 +1,12 @@
+.hero {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @include mobile {
+    padding-top: 0;
+  }
+
+  &__container {
+    @include flex-center-column;
+  }
+}
