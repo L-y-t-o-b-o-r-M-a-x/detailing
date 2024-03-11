@@ -20,11 +20,7 @@ html {
   min-height: 100%;
   font-size: 16px;
   color: var(--light-color);
-  background-color: #2a2a29;
-  // background-image: url('../img/logo-2.svg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 1000px 500px;
+  background-color: var(--bg-body);
 
   @include tablet {
     background-size: 800px 300px;
@@ -142,4 +138,10 @@ a {
   @include mobile {
     font-size: 26px;
   }
+}
+
+.caption {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 30px;
 }

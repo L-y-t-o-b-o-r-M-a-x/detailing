@@ -1,0 +1,37 @@
+.contacts {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__container {
+    @include flex-center-column;
+  }
+
+  &__address {
+    @include flex-all-sb;
+
+    width: 100%;
+  }
+
+  &__wrapper {
+    @include flex;
+  }
+
+
+  &__icon {
+    // width: 64px;
+    // height: 64px;
+    border-radius: 50%;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--light-color);
+    }
+  }
+
+  &__phone-content {
+    @include flex-center-column;
+  }
+
+
+}
