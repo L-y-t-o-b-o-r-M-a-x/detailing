@@ -1,6 +1,6 @@
 .maps {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   // background-color: var(--light-grey);
 }
 
@@ -12,3 +12,7 @@
 [class*="copyrights-pane"] {
   display: none !important;
 }
+
+// [class*="ground-pane"] {
+//   filter: grayscale(1);
+// }
