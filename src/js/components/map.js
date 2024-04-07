@@ -12,10 +12,15 @@ function init() {
       balloonContent: `
 
     <div class="balloon">
+      <h3 class="balloon__title">Наш ks bunker</h3>
       <div class="balloon__address">2-й Фабричный проезд, 16, Пушкино</div>
       <div class="balloon__contacts">
-      <a href="tel:+79804767246">+79804767246</a>
-      <a href="tel:+79859437936">+79859437936</a>
+        <div class="balloon__contacts-tel">
+        <a href="tel:+79804767246">+79804767246</a>
+        </div>
+        <div class="balloon__contacts-tel">
+        <a href="tel:+79859437936">+79859437936</a>
+        </div>
       </div>
     </div>
 
@@ -36,9 +41,11 @@ function init() {
   map.controls.remove("fullscreenControl"); // удаляем кнопку перехода в полноэкранный режим
   map.controls.remove("zoomControl"); // удаляем контрол зуммирования
   map.controls.remove("rulerControl"); // удаляем контрол правил
-  // map.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
+  map.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
 
   map.geoObjects.add(placemark);
+
+  placemark.balloon.open();
 }
 
 ymaps.ready(init);

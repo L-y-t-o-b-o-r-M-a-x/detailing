@@ -1,6 +1,6 @@
 .contacts {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 
   &__container {
     @include flex-center-column;
@@ -10,7 +10,13 @@
     @include flex-all-sb;
 
     width: 100%;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
+
+    @include tablet {
+      @include flex-center-column;
+
+      row-gap: 20px;
+    }
   }
 
   &__wrapper {
@@ -19,8 +25,7 @@
 
 
   &__icon {
-    // width: 64px;
-    // height: 64px;
+    margin-right: 10px;
     border-radius: 50%;
 
     svg {
@@ -32,6 +37,19 @@
 
   &__phone-content {
     @include flex-center-column;
+  }
+
+  &__caption {
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    color: var(--light-color);
+    font-style: normal;
+  }
+
+  &__link:not(:last-child) {
+    margin-bottom: 10px;
   }
 
 

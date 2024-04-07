@@ -1,0 +1,18 @@
+.balloon {
+  &__title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__address {
+    margin-bottom: 5px;
+  }
+
+  &__contacts {
+    @include flex-all-sb;
+  }
+
+}
