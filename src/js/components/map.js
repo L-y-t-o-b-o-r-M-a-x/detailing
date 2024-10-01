@@ -19,7 +19,7 @@ function init() {
         <a href="tel:+79804767246">+79804767246</a>
         </div>
         <div class="balloon__contacts-tel">
-        <a href="tel:+79859437936">+79859437936</a>
+        <a href="tel:+79251484989">+79251484989</a>
         </div>
       </div>
     </div>
