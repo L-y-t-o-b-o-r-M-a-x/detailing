@@ -10,6 +10,15 @@
     }
   }
 
+  &__list--footer {
+    @include flex-column-start;
+
+  }
+
+  &__item--footer {
+    margin-bottom: 20px;
+  }
+
   &__item {
     &:not(:last-child) {
       margin-right: 25px;

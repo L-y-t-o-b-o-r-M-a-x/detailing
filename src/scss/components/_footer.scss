@@ -1,4 +1,37 @@
 .footer {
   padding-top: 30px;
   padding-bottom: 30px;
+
+  &__container {
+    @include flex-all-sb;
+
+    position: relative;
+
+  }
+
+  &__nav-list {
+    @include flex-column;
+  }
+
+  &__wrapper {
+    @include flex-all-sb;
+
+    width: 57%;
+
+    @include tablet {
+      width: 60%;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+
+  &__copyright {
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+
+  }
 }
