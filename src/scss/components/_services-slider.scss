@@ -4,15 +4,20 @@
   position: relative;
   margin: 0 auto;
 
+  @include tablet {
+    padding: 130px 0;
+  }
+
+  @include mobile {
+    padding: 115px 0;
+  }
+
   &__slide {
     overflow: hidden;
     opacity: 0.5;
     transition: .5s;
   }
 
-  // &__wrapper {
-
-  // }
 
   &__image {
     width: 100%;
@@ -35,6 +40,10 @@
 .swiper-button-next,
 .swiper-button-prev {
   color: var(--light-color);
+
+  @include mobile {
+    display: none;
+  }
 }
 
 .swiper-slide-active {

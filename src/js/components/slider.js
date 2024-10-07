@@ -32,7 +32,15 @@ const swiper = new Swiper(el, {
     clickable: true,
     dynamicBullets: true,
   },
-  // breakpoints: {
-
-  // },
+  breakpoints: {
+  320: {
+    slidesPerView: 1,
+    spaceBetween: 10,
+  },
+  576: {
+    slidesPerView: 3,
+    spaceBetween: 30,
+  },
+    },
 });
+
