@@ -316,11 +316,16 @@ const toProd = (done) => {
   done();
 };
 
-exports.default = series(clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, watchFiles);
+const copyStaticFiles = () => {
+  return src([`${paths.resourcesFolder}/robots.txt`, `${paths.resourcesFolder}/sitemap.xml`])
+    .pipe(dest(buildFolder));
+};
+
+exports.default = series(clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites,copyStaticFiles, watchFiles);
 
 exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, webpImages, svgSprites)
 
-exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, htmlMinify);
+exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites,copyStaticFiles, htmlMinify);
 
 exports.cache = series(cache, rewrite);
 
